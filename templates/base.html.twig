@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+    <header class="header">
+        <div class="logo">
+            <!-- Insert your logo image here -->
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="categories">
+            <ul>
+                <li><a href="#">La Mariée</a></li>
+                <li><a href="#">Robes en couleur</a></li>
+                <li><a href="#">La Maison</a></li>
+                <li><a href="#">Rendez-vous / Boutique</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <ul>
+                <li><a href="#">Compte</a></li>
+                <li><a href="#">Panier</a></li>
+                <li><a href="#">Recherche</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="images/banner.png" alt="Nos Clientes">
+        <h2 class="banner-text">Nos Clientes</h2>
+    </div>
+        {% block body %}{% endblock %}
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>LA MARIEE</h3>
+                <ul>
+                    <li>Cérémonie</li>
+                    <li>Civil</li>
+                    <li>Accessoires</li>
+                    <li>Seconde Main</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>ROBES EN COULEUR</h3>
+                <ul>
+                    <li>Collection 2022</li>
+                    <li>Seconde Main couleur</li>
+                    <li>Intemporels</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>LA MAISON</h3>
+                <ul>
+                    <li>Nous</li>
+                    <li>Blog</li>
+                    <li>FAQ</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>RENDEZ-VOUS / BOUTIQUE</h3>
+                <ul>
+                    <li>Prise de rendez-vous au showroom</li>
+                    <li>Sur-Mesure</li>
+                    <li>Essayage Virtuel</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>

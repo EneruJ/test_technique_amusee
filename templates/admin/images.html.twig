@@ -1,0 +1,23 @@
+{# templates/admin/images.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Images{% endblock %}
+
+{% block body %}
+    <ul class="parent">
+        {% if images is not empty %}
+            {% for image in images %}
+                <li class="image-container div{{ loop.index }}">
+                    <img src="{{ image.imageUrl }}" alt="{{ image.imageText }}">
+                    <div class="image-text">
+                        <p>{{ image.imageText }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        {% else %}
+            {# Affichez un message si le tableau d'images est vide #}
+            <p>Aucune image trouvée.</p>
+        {% endif %}
+    </ul>
+{% endblock %}

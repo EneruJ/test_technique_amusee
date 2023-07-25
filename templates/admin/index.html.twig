@@ -1,0 +1,22 @@
+{# templates/admin/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin{% endblock %}
+
+{% block body %}
+    <h1>Ajouter une image</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.imageUrl) }}
+    {{ form_row(form.imageText) }}
+
+    <button type="submit">Ajouter</button>
+    {{ form_end(form) }}
+
+    {% if app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ app.flashes('success')[0] }}
+        </div>
+    {% endif %}
+{% endblock %}

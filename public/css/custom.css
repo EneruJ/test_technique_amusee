@@ -1,0 +1,184 @@
+/* Reset margin for the body */
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+/* CSS for the header section */
+.header {
+    background-color: #f8f8f8;
+    padding: 10px 128px; /* Add space to the left and right of the header */
+    margin-top: 0; /* Remove margin from the top */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 100px; /* Adjust the logo width as needed */
+    height: auto;
+}
+
+.categories{
+    margin-left: 70px;
+}
+
+.categories ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.categories li {
+    margin-right: 70px; /* Add more space between each category */
+}
+
+.categories li:last-child {
+    margin-right: 0;
+}
+
+.categories a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.icons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.icons li {
+    margin-right: 15px;
+}
+
+.icons li:last-child {
+    margin-right: 0;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #333;
+}
+
+.banner {
+    text-align: center;
+    margin: 0; /* Remove margin to make the banner flush with the header */
+    padding: 0;
+    position: relative; /* Add relative positioning for banner-text positioning */
+}
+
+.banner img {
+    width: 100%; /* Make the image cover the full width of the page */
+    height: auto;
+}
+
+.banner-text {
+    background-color: transparent;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 100px;
+    font-weight: 200;
+}
+
+.parent {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    list-style: none;
+    padding: 0 300px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Agrandir légèrement l'image au survol */
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Styles pour la première image de la première ligne (petite image) */
+.image-container.div1 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+}
+
+/* Styles pour la deuxième image de la première ligne (grande image) */
+.image-container.div2 {
+    grid-row: 1 / span 2; /* La deuxième image occupe deux lignes */
+    grid-column: 2 / span 2; /* La deuxième image occupe deux colonnes */
+}
+
+.image-container.div3 {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.image-container.div4 {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.image-container.div5 {
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+}
+
+footer {
+    background-color: #EFEFEF;
+    padding: 20px 200px;
+}
+footer .footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer-column {
+    text-transform: capitalize;
+    margin-right: 20px;
+
+}
+footer .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+footer .footer-column li {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
