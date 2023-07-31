@@ -1,21 +1,19 @@
-/* Reset margin for the body */
 body {
     margin: 0;
     font-family: Montserrat, sans-serif;
 }
 
-/* CSS for the header section */
 .header {
     background-color: #f8f8f8;
-    padding: 10px 128px; /* Add space to the left and right of the header */
-    margin-top: 0; /* Remove margin from the top */
+    padding: 10px 128px;
+    margin-top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo img {
-    width: 100px; /* Adjust the logo width as needed */
+    width: 100px;
     height: auto;
 }
 
@@ -31,7 +29,7 @@ body {
 }
 
 .categories li {
-    margin-right: 70px; /* Add more space between each category */
+    margin-right: 70px;
 }
 
 .categories li:last-child {
@@ -41,7 +39,6 @@ body {
 .categories a {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
 }
 
 .icons ul {
@@ -66,13 +63,13 @@ body {
 
 .banner {
     text-align: center;
-    margin: 0; /* Remove margin to make the banner flush with the header */
+    margin: 0;
     padding: 0;
-    position: relative; /* Add relative positioning for banner-text positioning */
+    position: relative;
 }
 
 .banner img {
-    width: 100%; /* Make the image cover the full width of the page */
+    width: 100%;
     height: auto;
 }
 
@@ -93,7 +90,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     list-style: none;
-    padding: 0 300px;
+    padding: 30px 300px 50px 300px;
 }
 
 .image-container {
@@ -108,42 +105,41 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.image-container:hover img {
-    transform: scale(1.1); /* Agrandir légèrement l'image au survol */
+    transition: transform 0.3s;
 }
 
 .image-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: opacity 2s;
 }
 
 .image-container:hover .image-text {
     opacity: 1;
-    height: 100%;
-    width: 100%;
 }
 
 
-/* Styles pour la première image de la première ligne (petite image) */
 .image-container.div1 {
     grid-row: 1 / span 1;
     grid-column: 1 / span 1;
 }
 
-/* Styles pour la deuxième image de la première ligne (grande image) */
+
 .image-container.div2 {
-    grid-row: 1 / span 2; /* La deuxième image occupe deux lignes */
-    grid-column: 2 / span 2; /* La deuxième image occupe deux colonnes */
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 2;
 }
 
 .image-container.div3 {
@@ -163,7 +159,7 @@ body {
 
 footer {
     background-color: #EFEFEF;
-    padding: 20px 200px;
+    padding: 20px 300px;
 }
 footer .footer-columns {
     display: flex;
@@ -182,3 +178,4 @@ footer .footer-column li {
     margin-bottom: 10px;
     font-weight: 400;
 }
+

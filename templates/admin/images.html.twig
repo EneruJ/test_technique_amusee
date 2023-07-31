@@ -9,9 +9,11 @@
         {% if images is not empty %}
             {% for image in images %}
                 <li class="image-container div{{ loop.index }}">
-                    <img src="{{ image.imageUrl }}" alt="{{ image.imageText }}">
-                    <div class="image-text">
-                        <p>{{ image.imageText }}</p>
+                    <div class="image-container">
+                        <img src="{{ image.imageUrl }}" alt="{{ image.imageText }}">
+                        <div class="image-text">
+                            <p>{{ image.imageText }}</p>
+                        </div>
                     </div>
                 </li>
             {% endfor %}
