@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}L'amusee - Test Technique{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('css/custom.css') }}" media="screen and (min-width: 901px)">
         <link rel="stylesheet" href="{{ asset('css/custom-mobile.css') }}" media="screen and (max-width: 900px)">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -33,19 +33,19 @@
         </div>
         <div class="icons">
             <ul>
-                <li><a href="#"><i class="fa fa-user"></i></a></li> <!-- Icône pour le compte -->
-                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li> <!-- Icône pour le panier -->
-                <li><a href="#"><i class="fa fa-search"></i></a></li> <!-- Icône pour la recherche -->
+                <li><a href="#"><i class="fa fa-user"></i></a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                <li><a href="#"><i class="fa fa-search"></i></a></li>
             </ul>
         </div>
     </header>
-
 
     <div class="banner">
         <img src="images/banner.png" alt="Nos Clientes">
         <h2 class="banner-text">Nos Clientes</h2>
     </div>
-        {% block body %}{% endblock %}
+
+    {% block body %}{% endblock %}
 
     <footer>
         <div class="footer-columns">
